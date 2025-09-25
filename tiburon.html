@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Tiburón AR</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(180deg, #004d66, #006680, #0088a9);
+      background-size: 400% 400%;
+      animation: oceanBackground 15s ease infinite;
+    }
+
+    @keyframes oceanBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 32px;
+      text-shadow: 2px 2px 4px #003;
+    }
+
+    model-viewer {
+      width: 90vw;
+      height: 70vh;
+      margin: 20px auto;
+      display: block;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+  </style>
 </head>
 <body>
   <h1>Tiburón en Realidad Aumentada 🦈</h1>
+
   <model-viewer
     src="https://manulandazapal2022-prog.github.io/realidad-aumentada/tiburon_torpedo.glb"
     alt="Tiburón 3D"
     shadow-intensity="1"
     camera-controls
     ar
-    auto-rotate>
+    auto-rotate
+    scale="2 2 2">
   </model-viewer>
 </body>
 </html>
